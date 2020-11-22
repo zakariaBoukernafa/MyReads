@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
-import PropType from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 //handles the select options clicks and moves the book to the selected shelf
 class BookshelfChanger extends Component {
     onShelfChange = event => {
-        const {onShelfChange} = this.props.onShelfChange;
-        onShelfChange(event.target.value);
+        const {onShelfChange,book} = this.props;
+        onShelfChange(book,event.target.value);
     }
 
     render() {
