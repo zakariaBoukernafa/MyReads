@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const BookCover = props => {
     const { backgroundImage } = props;
-    console.log(`background images ${backgroundImage}`)
     return (
         <div
             className="book-cover"

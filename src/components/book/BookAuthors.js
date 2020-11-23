@@ -6,7 +6,6 @@ const BookAuthors = props => {
     return (
         bookAuthors.map((author, index) => (
             <div key={index} className="book-authors">{author}</div>
-
         ))
 
     );
@@ -18,7 +17,7 @@ BookAuthors.prototype = {
 };
 
 BookAuthors.defaultProps = {
-    bookAuthors: '',
+    bookAuthors: [],
 };
 
 export default BookAuthors;

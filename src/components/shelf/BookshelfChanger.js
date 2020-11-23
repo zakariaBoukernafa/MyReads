@@ -28,5 +28,8 @@ class BookshelfChanger extends Component {
         onShelfChange: PropTypes.func.isRequired,
         shelf: PropTypes.string.isRequired
     };
+    static defaultProps = {
+        shelf: 'None',
+    };
 }
 export default BookshelfChanger;
