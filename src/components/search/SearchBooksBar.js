@@ -4,10 +4,10 @@ import CloseSearch from './CloseSearch';
 import Proptypes from 'prop-types';
 const SearchBooksBar = props => {
 
-    const {handleSearchChange} = props;
+    const {handleSearchChange ,onSearchButtonClose} = props;
     return (
         <div className="search-books-bar">
-            <CloseSearch/>
+            <CloseSearch onSearchButtonClose={onSearchButtonClose}/>
             <SearchBooksInput handleSearchChange={handleSearchChange}/>
         </div>
     );

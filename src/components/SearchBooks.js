@@ -5,10 +5,10 @@ import Proptypes from 'prop-types';
 const SearchBooks =props => {
 
   
-        const { books, onShelfChange, handleSearchChange } = props;
+        const { books, onShelfChange, handleSearchChange,onSearchButtonClose } = props;
         return (
             <div className="search-books">
-                <SearchBooksBar handleSearchChange={ handleSearchChange}/>
+                <SearchBooksBar handleSearchChange={handleSearchChange} onSearchButtonClose={onSearchButtonClose}/>
                 <SearchBooksResults books={books} onShelfChange={onShelfChange}/>
             </div>
         );

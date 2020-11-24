@@ -10,7 +10,7 @@ const Book = props => {
         ? book.imageLinks.thumbnail
         : '';
     return (
-        <div>
+        <div  className="book">
             <BookTop
                 backgroundImage={backgroundImage}
                 book ={book}

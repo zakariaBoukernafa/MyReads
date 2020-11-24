@@ -35,12 +35,12 @@ class BooksApp extends React.Component {
             });
     }
 
-  handleSearchChange = (query) => {
-    console.log(`query is ${query} , result is ${this.state.searchedBooks}`);
+    handleSearchChange = (query) => {
+        console.log(`query is ${query} , result is ${this.state.searchedBooks}`);
         if (query) {
             BooksAPI
                 .search(query.trim())
-              .then(books => {
+                .then(books => {
                     books.length > 0
                         ? this.setState({searchedBooks: books})
                         : this.setState({searchedBooks: []})
@@ -48,6 +48,10 @@ class BooksApp extends React.Component {
         } else {
             this.setState({searchedBooks: []});
         }
+    }
+
+    onSearchButtonClose = () => {
+        this.setState({searchedBooks: []});
     }
 
     render() {
@@ -66,7 +70,8 @@ class BooksApp extends React.Component {
                     render={() => ((<SearchBooks
                     books={this.state.searchedBooks}
                     onShelfChange={this.onShelfChange}
-                    handleSearchChange={this.handleSearchChange}/>))}></Route>
+                    handleSearchChange={this.handleSearchChange}
+                    onSearchButtonClose={this.onSearchButtonClose}/>))}></Route>
 
             </div>
         )
